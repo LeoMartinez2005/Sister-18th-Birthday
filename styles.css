@@ -15,6 +15,7 @@ body {
     padding: 30px;
     border: 4px ridge #999; 
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
 }
         
 .rainbow-text {
