@@ -158,3 +158,55 @@ body {
     width: 150px;
     height: auto;
 }
+
+@media (max-width: 1024px) {
+    body {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .gradient-text {
+        font-size: 32px;
+    }
+    
+    .rainbow-text {
+        font-size: 24px;
+    }
+
+    .outer, [class^="left-"], [class^="right-"], [class^="l-"], [class^="r-"] {
+        position: static !important; 
+        transform: none !important;  
+        display: block;
+        margin: 10px auto;         
+        max-width: 100px;
+    }
+
+    .door-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        margin: 30px auto; 
+    }
+
+    .back-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+
