@@ -7,7 +7,7 @@ body {
         }
 
 .wrapper {
-    position: relative;
+    position: absolute;
     max-width: 800px;
     margin: 0 auto; 
     background-color: #000000;
@@ -54,6 +54,7 @@ body {
 }
 
 .images {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
