@@ -3,10 +3,7 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
     margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
         }
 
 .wrapper {
