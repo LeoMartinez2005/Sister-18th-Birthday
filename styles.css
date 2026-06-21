@@ -1,16 +1,15 @@
 body {
     background-color: #000000;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+
+            
+    font-family: "Times New Roman", Times, serif;
     margin: 0;
     padding: 20px;
-
         }
 
 .wrapper {
-    /* REMOVED position: absolute to let margin: 0 auto work */
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto; /* Centers the main layout block perfectly on all screens */
+    margin: 0 auto; 
     background-color: #000000;
     padding: 30px;
     border: 4px ridge #999; 
@@ -159,48 +158,4 @@ body {
     height: auto;
 }
 
-@media (max-width: 1400px) {
-    body {
-        overflow-x: hidden; /* Clears any accidental side-scrolling whitespace */
-        padding: 10px;
-    }
-
-    /* Hide the floating side icons entirely on smaller screens so they don't cause overlaps */
-    .outer, 
-    [class^="left-"], [class^="right-"], 
-    [class^="l-"], [class^="r-"] {
-        display: none !important;
-    }
-
-    /* Bring the doorway image directly under the main content box on mobile devices */
-    .door-image {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        display: block !important;
-        margin: 30px auto !important; /* Centers the door perfectly */
-    }
-
-    /* Bring the back button link to a stable location at the top */
-    .back-image {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        display: block !important;
-        margin: 10px auto !important;
-    }
-
-    /* Shrink the headers slightly to fit smaller mobile widths comfortably */
-    .gradient-text {
-        font-size: 32px !important;
-    }
-    .rainbow-text {
-        font-size: 24px !important;
-    }
-}
-
-
-
-
-
-
+    
