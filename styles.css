@@ -56,8 +56,8 @@ body {
 
 .images {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end, flex-start;
+    align-items: flex-end, flex-start;
     flex-wrap: wrap;
     gap: 15px;
     margin: 20px 0;
