@@ -7,8 +7,9 @@ body {
 }
 
 .wrapper {
-    width: 900px;
-    margin: 0 auto; 
+    width: 800px;
+    margin: 0;
+    margin-left: 100px;
     background-color: #000000;
     padding: 30px;
     border: 4px ridge #999; 
