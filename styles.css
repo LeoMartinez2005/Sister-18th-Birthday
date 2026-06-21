@@ -1,9 +1,17 @@
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: #000000;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
 
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* stop the wide decorative elements from forcing horizontal scroll */
+    width: 100%;
 }
 
 .wrapper {
@@ -64,6 +72,7 @@ body {
 
 .images img {
     width: 300px;
+    max-width: 100%;
     height: auto;
     border: 3px outset #ffffff;
     object-fit: cover;
@@ -71,6 +80,8 @@ body {
 
 .outer {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
     width: 150px;
     height: auto;
@@ -126,20 +137,19 @@ body {
 }
 
 .door-link {
-    display: inline-block;
+    display: block;
     cursor: pointer;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .door-image {
-    position: absolute;
     width: 120px;
     height: auto;
-    top: 1700px;
-    left: 1700px;
+    transition: transform 0.2s ease;
 }
 
 .door-link:hover .door-image {
-    content: url("photos/20260619_114943.jpg");
     transform: scale(1.05);
 }
 
@@ -157,4 +167,39 @@ body {
     height: auto;
 }
 
-    
+/* ============================================================
+   Mobile / small-screen fixes
+   ------------------------------------------------------------
+   The .outer gifs and dog spawn points above were placed with
+   pixel coordinates meant for a desktop canvas roughly 1800px+
+   wide. There's no room to flank an 800px box with images on a
+   phone screen, so we hide the purely-decorative gifs below
+   this width instead of letting them overflow the page.
+   ============================================================ */
+@media (max-width: 1100px) {
+    .outer {
+        display: none;
+    }
+
+    .back-image {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .wrapper {
+        padding: 15px;
+    }
+
+    .rainbow-text {
+        font-size: 22px;
+    }
+
+    .gradient-text {
+        font-size: 30px;
+    }
+}
