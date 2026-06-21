@@ -1,58 +1,57 @@
-/* --- GLOBAL STYLES --- */
 body {
     background-color: #000000;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+
     margin: 0;
     padding: 20px;
-    font-family: "Times New Roman", Times, serif;
-; /* Keeps the screen from creating huge side scrolling gaps */
 }
 
-/* --- THE MAIN CENTERED CONTENT BOX --- */
 .wrapper {
-    width: 90%;
     max-width: 800px;
-    margin: 60px auto; 
+    margin: 0 auto; 
     background-color: #000000;
     padding: 30px;
     border: 4px ridge #999; 
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     box-sizing: border-box;
-    position: relative; /* THE KEY: This anchors all side graphics safely to THIS box */
 }
         
-/* --- TYPOGRAPHY --- */
 .rainbow-text {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 38px;
-    text-align: center;
+    text-align: Center;
     font-weight: bold;
     filter: drop-shadow(#A3A3A3 2px 2px 0px);
+
     background: linear-gradient(to right, #ff0000, #ff3300, #ff6600, #ff9500, #ffc800, #fffb00, #d4ff00, #a1ff00,
                                 #73ff00, #40ff00, #40ff00, #00ff22, #00ff55, #00ff84, #00ffb7, #00ffea, #00e5ff,
                                  #00b2ff, #007fff, #0051ff, #001eff, #1100ff, #4400ff, #7700ff, #a600ff, #d900ff,
                                  #ff00f6, #ff00c3, #ff0091, #ff0062, #ff002f);
+
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .gradient-text {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 50px;
     margin-top: 1px;
-    text-align: center;
+    text-align: Center;
     font-weight: bold;
     filter: drop-shadow(#A3A3A3 2px 2px 0px);
+
     background: linear-gradient(to right, #a1ff00,
                                 #73ff00, #40ff00, #40ff00, #00ff22, #00ff55, #00ff84, #00ffb7, #00ffea, #00e5ff,
                                  #00b2ff, #007fff, #0051ff, #001eff, #1100ff, #4400ff);
+
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
-/* --- PHOTO GRID --- */
 .images {
     display: flex;
     justify-content: center;
@@ -60,6 +59,7 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     margin: 20px 0;
+
 }
 
 .images img {
@@ -69,49 +69,49 @@ body {
     object-fit: cover;
 }
 
-/* --- SIDE GRAPHICS (Anchored perfectly to the container edges) --- */
 .outer {
     position: absolute;
     z-index: -1;
     width: 150px;
     height: auto;
+
 }
 
-/* Left items sit 170px to the left of your photo box */
-[class^="left-"], [class^="l-"] {
-    left: -170px;
-}
+.left-1 {transform: translate(350px, 10px);}
+.right-1 {transform: translate(1375px, 50px);}
+.left-2 {transform: translate(350px, 210px);}
+.right-2 {transform: translate(1375px, 150px);}
+.left-3 {transform: translate(350px, 150px);}
+.right-3 {transform: translate(1375px, 350px);}
+.left-4 {transform: translate(350px, 440px);}
+.right-4 {transform: translate(1375px, 450px);}
+.left-5 {transform: translate(350px, 710px);}
+.right-5 {transform: translate(1375px, 550px);}
+.left-6 {transform: translate(350px, 910px);}
+.right-6 {transform: translate(1375px, 850px);}
+.left-7 {transform: translate(350px, 1110px);}
+.right-7 {transform: translate(1375px, 1150px);}
+.left-8 {transform: translate(350px, 1310px);}
+.right-8 {transform: translate(1375px, 1350px);}
+.left-9 {transform: translate(350px, 1550px);}
+.right-9 {transform: translate(1375px, 1450px);}
+.left-0 {transform: translate(350px, 1710px);}
+.right-0 {transform: translate(1375px, 1650px);}
+.right-12 {transform: translate(1375px, 1830px);}
+.left-13 {transform: translate(345px, 1850px);}
 
-/* Right items sit 170px to the right of your photo box */
-[class^="right-"], [class^="r-"] {
-    right: -170px;
-}
+.l-1 {transform: translate(350px, 20px);}
+.r-2 {transform: translate(1375px, 150px);}
+.l-3 {transform: translate(350px, 350px);}
+.r-4 {transform: translate(1375px, 450px);}
+.l-5 {transform: translate(350px, 710px);}
+.r-6 {transform: translate(1375px, 850px);}
+.l-7 {transform: translate(350px, 1110px);}
+.r-8 {transform: translate(1375px, 1350px);}
+.l-9 {transform: translate(350px, 1550px);}
+.r-0 {transform: translate(1375px, 1650px);}
 
-/* Individual height positions */
-.left-1, .l-1 { top: 10px; }
-.right-1 { top: 50px; }
-.left-2 { top: 210px; }
-.right-2, .r-2 { top: 150px; }
-.left-3, .l-3 { top: 150px; }
-.right-3 { top: 350px; }
-.left-4 { top: 440px; }
-.right-4, .r-4 { top: 450px; }
-.left-5, .l-5 { top: 710px; }
-.right-5 { top: 550px; }
-.left-6 { top: 910px; }
-.right-6, .r-6 { top: 850px; }
-.left-7, .l-7 { top: 1110px; }
-.right-7 { top: 1150px; }
-.left-8 { top: 1310px; }
-.right-8, .r-8 { top: 1350px; }
-.left-9, .l-9 { top: 1550px; }
-.right-9 { top: 1440px; }
-.left-0 { top: 1710px; }
-.right-0, .r-0 { top: 1650px; }
-.right-12 { top: 1830px; }
-.left-13 { top: 1850px; }
 
-/* --- INTERACTIVE PETS AND LINKS --- */
 .dog {
     position: absolute;
     cursor: pointer;
@@ -119,6 +119,10 @@ body {
     width: 150px;
     height: auto;
     transition: transform 0.1ms ease;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
 }
 
 .door-link {
@@ -130,8 +134,8 @@ body {
     position: absolute;
     width: 120px;
     height: auto;
-    bottom: -120px; /* Positions it nicely right outside the bottom right of the box */
-    right: -150px;
+    top: 1700px;
+    left: 1700px;
 }
 
 .door-link:hover .door-image {
@@ -142,12 +146,15 @@ body {
 .back-link {
     display: inline-block;
     cursor: pointer;
+
 }
 
 .back-image {
     position: absolute;
-    top: 10px;
-    left: -170px; /* Aligns smoothly with the left-side stickers */
+    top: 50px;
+    left: 50px;
     width: 150px;
     height: auto;
 }
+
+    
