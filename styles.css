@@ -6,7 +6,7 @@ body {
     padding: 20px;
     font-family: "Times New Roman", Times, serif;
     /* This prevents the giant sideways scroll on mobile */
-    overflow-x: hidden; 
+
 }
 
 /* --- THE MAIN CENTERED CONTENT BOX --- */
