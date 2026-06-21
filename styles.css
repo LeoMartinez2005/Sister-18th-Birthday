@@ -5,13 +5,11 @@ body {
     margin: 0;
     padding: 20px;
     font-family: "Times New Roman", Times, serif;
-    /* This prevents the giant sideways scroll on mobile */
-
+ /* Keeps the screen from creating huge side scrolling gaps */
 }
 
 /* --- THE MAIN CENTERED CONTENT BOX --- */
 .wrapper {
-    /* Using standard margins to keep it centered on absolutely every screen size */
     width: 90%;
     max-width: 800px;
     margin: 60px auto; 
@@ -20,7 +18,7 @@ body {
     border: 4px ridge #999; 
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     box-sizing: border-box;
-    position: relative; /* Keeps the container safe without locking it left */
+    position: relative; /* THE KEY: This anchors all side graphics safely to THIS box */
 }
         
 /* --- TYPOGRAPHY --- */
@@ -71,7 +69,7 @@ body {
     object-fit: cover;
 }
 
-/* --- SIDE GRAPHICS POSITIONING --- */
+/* --- SIDE GRAPHICS (Anchored perfectly to the container edges) --- */
 .outer {
     position: absolute;
     z-index: -1;
@@ -79,40 +77,39 @@ body {
     height: auto;
 }
 
-/* Changed translations to % values so they stay aligned to screens relative to center */
-.left-1 { transform: translate(calc(50vw - 650px), 10px); }
-.right-1 { transform: translate(calc(50vw + 450px), 50px); }
-.left-2 { transform: translate(calc(50vw - 650px), 210px); }
-.right-2 { transform: translate(calc(50vw + 450px), 150px); }
-.left-3 { transform: translate(calc(50vw - 650px), 150px); }
-.right-3 { transform: translate(calc(50vw + 450px), 350px); }
-.left-4 { transform: translate(calc(50vw - 650px), 440px); }
-.right-4 { transform: translate(calc(50vw + 450px), 450px); }
-.left-5 { transform: translate(calc(50vw - 650px), 710px); }
-.right-5 { transform: translate(calc(50vw + 450px), 550px); }
-.left-6 { transform: translate(calc(50vw - 650px), 910px); }
-.right-6 { transform: translate(calc(50vw + 450px), 850px); }
-.left-7 { transform: translate(calc(50vw - 650px), 1110px); }
-.right-7 { transform: translate(calc(50vw + 450px), 1150px); }
-.left-8 { transform: translate(calc(50vw - 650px), 1310px); }
-.right-8 { transform: translate(calc(50vw + 450px), 1350px); }
-.left-9 { transform: translate(calc(50vw - 650px), 1550px); }
-.right-9 { transform: translate(calc(50vw + 450px), 1450px); }
-.left-0 { transform: translate(calc(50vw - 650px), 1710px); }
-.right-0 { transform: translate(calc(50vw + 450px), 1650px); }
-.right-12 { transform: translate(calc(50vw + 450px), 1830px); }
-.left-13 { transform: translate(calc(50vw - 655px), 1850px); }
+/* Left items sit 170px to the left of your photo box */
+[class^="left-"], [class^="l-"] {
+    left: -170px;
+}
 
-.l-1 { transform: translate(calc(50vw - 650px), 20px); }
-.r-2 { transform: translate(calc(50vw + 450px), 150px); }
-.l-3 { transform: translate(calc(50vw - 650px), 350px); }
-.r-4 { transform: translate(calc(50vw + 450px), 450px); }
-.l-5 { transform: translate(calc(50vw - 650px), 710px); }
-.r-6 { transform: translate(calc(50vw + 450px), 850px); }
-.l-7 { transform: translate(calc(50vw - 650px), 1110px); }
-.r-8 { transform: translate(calc(50vw + 450px), 1350px); }
-.l-9 { transform: translate(calc(50vw - 650px), 1550px); }
-.r-0 { transform: translate(calc(50vw + 450px), 1650px); }
+/* Right items sit 170px to the right of your photo box */
+[class^="right-"], [class^="r-"] {
+    right: -170px;
+}
+
+/* Individual height positions */
+.left-1, .l-1 { top: 10px; }
+.right-1 { top: 50px; }
+.left-2 { top: 210px; }
+.right-2, .r-2 { top: 150px; }
+.left-3, .l-3 { top: 150px; }
+.right-3 { top: 350px; }
+.left-4 { top: 440px; }
+.right-4, .r-4 { top: 450px; }
+.left-5, .l-5 { top: 710px; }
+.right-5 { top: 550px; }
+.left-6 { top: 910px; }
+.right-6, .r-6 { top: 850px; }
+.left-7, .l-7 { top: 1110px; }
+.right-7 { top: 1150px; }
+.left-8 { top: 1310px; }
+.right-8, .r-8 { top: 1350px; }
+.left-9, .l-9 { top: 1550px; }
+.right-9 { top: 1440px; }
+.left-0 { top: 1710px; }
+.right-0, .r-0 { top: 1650px; }
+.right-12 { top: 1830px; }
+.left-13 { top: 1850px; }
 
 /* --- INTERACTIVE PETS AND LINKS --- */
 .dog {
@@ -133,8 +130,8 @@ body {
     position: absolute;
     width: 120px;
     height: auto;
-    top: 1700px;
-    left: calc(50vw + 420px); /* Keeps the door aligned relative to the screen center */
+    bottom: -120px; /* Positions it nicely right outside the bottom right of the box */
+    right: -150px;
 }
 
 .door-link:hover .door-image {
@@ -149,8 +146,8 @@ body {
 
 .back-image {
     position: absolute;
-    top: 50px;
-    left: calc(50vw - 620px); /* Keeps the back button aligned relative to the screen center */
+    top: 10px;
+    left: -170px; /* Aligns smoothly with the left-side stickers */
     width: 150px;
     height: auto;
 }
